@@ -1,0 +1,20 @@
+# source fq.sh
+
+export http_proxy=http://127.0.0.1:1087;
+export https_proxy=http://127.0.0.1:1087;
+
+http_code=$(curl --write-out %{http_code} --silent --output /dev/null www.google.com)
+if [ $http_code -lt 400 -o $http_code -ne 000  ]; then
+    echo "成功"
+else
+    echo "失败"
+fi
+
+case $http_code in
+    301 )
+    echo "Moved Permanently"
+        ;;
+esac
+
+# 重新开一个子shell
+zsh
