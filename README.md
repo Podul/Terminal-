@@ -1,5 +1,5 @@
 # Terminal-socket-agent
-Terminal 走 Shadowsocks 代理
+Terminal 走代理
 
 ## 使用方法
 1. 下载`fq`文件，放在你喜欢的目录
